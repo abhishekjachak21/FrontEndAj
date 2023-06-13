@@ -15,3 +15,13 @@ const opBin = arr.map(binaryOP);
 
 console.log(op);
 console.log(opBin);
+
+//by using arrow function 
+const arrowFun = arr.map((x)=> x*2);
+console.log(arrowFun);
+
+const numbers = [1, 2, 3, 4, 5];
+
+const doubledNumbers = numbers.map((number) =>  number * 2 );
+
+console.log(doubledNumbers);
