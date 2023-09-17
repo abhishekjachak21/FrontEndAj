@@ -1,33 +1,33 @@
 
 ///--------------------------------------------
 // //switch statement
-// let day=4;
-// switch(day){
-//     case 1:
-//         console.log("Monday")
-//         break;
-//     case 2:
-//         console.log("Tuesday")
-//         break;
-//     case 3:
-//         console.log("Wednesday")
-//         break;
-//     case 4:
-//         console.log("Thursday") 
-//         break;
-//     case 5:
-//         console.log("Friday")
-//         break;
-//     case 6:
-//         console.log("Saturday")
-//         break;
-//     case 7:
-//         console.log("Sunday")
-//         break;
-//     default:
-//         console.log("Invalid day bro")   
-//         break; 
-// }
+let day=22;
+switch(day){
+    case 1:
+        console.log("Monday")
+        break;
+    case 2:
+        console.log("Tuesday")
+        break;
+    case 3:
+        console.log("Wednesday")
+        break;
+    case 4:
+        console.log("Thursday") 
+        break;
+    case 5:
+        console.log("Friday")
+        break;
+    case 6:
+        console.log("Saturday")
+        break;
+    case 7:
+        console.log("Sunday")
+        break;
+    default:
+        console.log("Invalid day MyFriend")   
+        break; 
+}
 ///--------------------------------------------
 
 
@@ -67,36 +67,49 @@
 
 ///--------------------------------------------
 //template string
-// let namee="Robin";
+// var namee="Robin";
+// // const namee="Robin";
 // namee="navin"
 // let age=20;
-// let aboutMe=`my name is ${namee} and age is ${age}`
+// let aboutMe=`my name is ${namee} and age is ${age}`  //ye yaad rakho
 // console.log(aboutMe)
 ///--------------------------------------------
 
 
 // //----------------------------------------
 // //string concatenation
-// let str1="uk",str2="ra";
+// let str1="Abhi",str2="eha";
 // let newStr=str1+str2;
+
+// console.log(typeof newStr);
+
 // console.log(newStr);
-// let newStr2=+str1 + +str2;
+
+// let newStr2=+str1 + +str2;   //samjhe, +changes str to no
 // console.log(typeof newStr2);
 // //----------------------------------------
 
 
 
+
+
+
 // //----------------------------------------
 // //conversion
-// var namee="Abhishek   "
-// console.log("HELLO WORLD");
+// const MyFriend="Krishna "//once again started js on 16sept 2k23
+// console.log(MyFriend);
+// var namee="& Abhishek"
+// console.log(MyFriend + namee);
+// console.log("\nHELLO WORLD");
+
 // newNamee=namee.trim();
 // console.log(newNamee.length); //name is a global var+special meaning ,so namee used
 // newNamee=namee.slice(0,3)  ; 
 // age=21
-// age=age + "" ; 
-// // str="love";
-// str = +"study";
+// age=age + "" ; //convertd into string...waah
+
+// str="love";
+// // str = +"study";
 
 // console.log(typeof age);
 // console.log(typeof 21);

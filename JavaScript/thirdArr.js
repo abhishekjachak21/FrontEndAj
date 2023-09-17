@@ -1,13 +1,13 @@
 //Array Functions
 ///-------------------------------------------------------
-let favs=["Methi","Bhakar","Basundi","Rabadi","Panir",297]
-favs.push(45);
-favs.pop();
-favs.shift();       
-favs.unshift("LOVE");
-console.log(favs)
-favs.splice(2, 1, "pavBhaji");
-console.log("After splice(2, 1, 'pavBhaji'): ", favs);
+// let favs=["Methi","Bhakar","Basundi","Rabadi","Panir",297]
+// favs.push(45);
+// favs.pop();
+// favs.shift();       
+// favs.unshift("LOVE");
+// console.log(favs)
+// favs.splice(2, 1, "pavBhaji");
+// console.log("After splice(2, 1, 'pavBhaji'): ", favs);
 ///-------------------------------------------------------
 
 
