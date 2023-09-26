@@ -1,15 +1,40 @@
 
+//--------------------------------------------------------------
+///object destructuring
+
+const Life = {human: "fuckedUp",
+        animals: "atPeace",
+        trees: "windy",
+        kutti: true};
+
+const {human, animals: ani, trees, kutti } = Life;
+
+console.log(trees);
+console.log(ani);
 
 //--------------------------------------------------------------
-const tinderUser = {};
 
-tinderUser.id =  "abhishekbro";
-tinderUser.email = "abhi@gmail.com";
-tinderUser.age = 21;
 
-console.log(tinderUser);
-console.log(Object.keys(tinderUser));
-console.log(Object.values(tinderUser));
+//going from down to up...now 18th tut
+
+
+
+// 17th ended
+//--------------------------------------------------------------
+///IMP for further projects
+// const tinderUser = {};
+
+// tinderUser.id =  "abhishekbro";
+// tinderUser.email = "abhi@gmail.com";
+// tinderUser.age = 21;
+// tinderUser.study = false;
+
+// console.log(tinderUser);
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+
+// // console.log(tinderUser.hasOwnProperty("id"));  //true
+// console.log(tinderUser.hasOwnProperty("isd"));   //false
 //--------------------------------------------------------------
 
 
