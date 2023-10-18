@@ -104,3 +104,25 @@ console.log(myObj.jojoLol());
 
 
 
+
+// destructuring
+// const person = {
+//     firstName: 'John',
+//     lastName: 'Doe',
+//     age: 30,
+//     city: 'New York'
+//   };
+  
+//   const { firstName, age } = person;
+  
+//   console.log(firstName); // Output: "John"
+//   console.log(age);  // Output: "Doe"
+
+
+const numbers = [1, 2, 3, 4, 5,6,67,7,7,7,7,7,7,65,4,3,,2,,12,3,];
+
+const [first, second,... fifth] = numbers;
+
+console.log(first);  // Output: 1
+console.log(second); // Output: 2
+console.log(fifth);  // Output: 5
