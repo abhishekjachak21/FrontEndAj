@@ -1,0 +1,199 @@
+<!-- this code is re organized by GPT,i written code,scroll down for that -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Page</title>
+    <style>
+        body {
+            background-color: cornflowerblue;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .page img {
+            height: 200px;
+            width: 300px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 15px;
+            margin-top: 10px;
+        }
+
+        .status {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .addF {
+            margin-top: 10px;
+            color: white;
+            background-color: blue;
+            border: none;
+            border-radius: 10px;
+            height: 30px;
+            width: 120px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Facebook Page</h1>
+    <div class="page">
+        <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTP5mQSEI40IsJlF-L-sNFVuqS-bIbXJ3bfkdu_tNrPp-0v3Awn"
+             alt="Profile Image">
+        <h1 class="status">Strangers</h1>
+        <button class="addF">Add Friend</button>
+    </div>
+
+    <script>
+        const addBtn = document.querySelector('.addF');
+        const status = document.querySelector('.status');
+        const imgg = document.querySelector('img');
+        let chk = 0;
+    
+        addBtn.addEventListener('click', function() {
+            if (chk === 0) {
+                status.innerHTML = 'Friends';
+                addBtn.innerHTML = 'Remove Friend';
+                imgg.src = 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTP5mQSEI40IsJlF-L-sNFVuqS-bIbXJ3bfkdu_tNrPp-0v3Awn';
+                chk = 1;
+            } else {
+                status.innerHTML = 'Strangers';
+                addBtn.innerHTML = 'Add Friend';
+                imgg.src = 'https://cdn.bollywoodbubble.com/wp-content/uploads/2017/02/Shraddha-Kapoor-crying.jpg';
+                chk = 0;
+            }
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaceBook Page</title>
+</head>
+<body style="background-color: cornflowerblue;">
+    <h1>FaceBook page</h1>
+    <div class="page">
+       
+            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTP5mQSEI40IsJlF-L-sNFVuqS-bIbXJ3bfkdu_tNrPp-0v3Awn"
+             height="200px" width="300px" >
+   
+            <h1 class='status' style="margin-left: 90px;">Strangers</h1> 
+
+            <button class="addF">Add Friend</button>
+    </div>
+    <style>
+        .page{
+            height: 330px;
+            width: 300px;
+            background-color: #fff;
+            margin: 300px;
+        }
+        .page img{
+            height:"200px" ;
+            width:"200px" ;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 15px;
+            margin-top: 3px;
+        }
+        .addF{
+            color: white;
+            background-color: blue;
+            border-radius: 10px;
+           height: 30px;
+           margin-left: 100px;
+           margin-top: 0px;
+        }
+    </style>
+
+    <script>
+    const addBtn = document.querySelector('.addF');
+    const status = document.querySelector('.status');
+    const imgg = document.querySelector('img');
+    let chk = 0;
+
+    addBtn.addEventListener('click', function() {
+        if (chk === 0) {
+            status.innerHTML = 'Friends';
+            addBtn.innerHTML = 'Remove Friend';
+            imgg.src = 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTP5mQSEI40IsJlF-L-sNFVuqS-bIbXJ3bfkdu_tNrPp-0v3Awn';
+            chk = 1;
+        } else {
+            status.innerHTML = 'Strangers';
+            addBtn.innerHTML = 'Add Friend';
+            imgg.src = 'https://cdn.bollywoodbubble.com/wp-content/uploads/2017/02/Shraddha-Kapoor-crying.jpg';
+            chk = 0;
+        }
+    });
+    </script>
+
+</body>
+</html> -->

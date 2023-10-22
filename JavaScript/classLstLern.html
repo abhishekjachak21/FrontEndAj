@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning classList</title>
+    <style>
+        .abc {
+            background-color: blueviolet;
+        }
+
+        .tatty {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <h2>Methods of classList</h2>
+    <ul class="abc love">
+        <li >add</li>
+        <li>remove</li>
+        <li>contains</li>
+    </ul>
+
+    <script>
+        // Select the element with the "abc" class
+        const adClasList = document.querySelector('.abc');
+
+        // Use the classList property to add a class
+        adClasList.classList.add('tatty');
+        console.log(adClasList.classList.contains('tatty')); // contains -> true
+
+        // Toggle the "tatty" class
+        adClasList.classList.toggle('tatty');
+        console.log(adClasList.classList.contains('tatty')); // contains -> false (toggled off)
+
+        adClasList.classList.toggle('tatty');
+        console.log(adClasList.classList.contains('tatty')); //
+
+        adClasList.classList.toggle('tatty');
+        console.log(adClasList.classList.contains('tatty')); //
+
+        adClasList.classList.toggle('tatty');
+        console.log(adClasList.classList.contains('tatty')); //
+
+        // Use the item method to get the class at a specific index
+        console.log(adClasList.classList.item(0)); // "abc"
+        console.log(adClasList.classList.item(1)); // "love"
+        console.log(adClasList.classList.item(2)); // "tatty"
+    </script>
+</body>
+</html>

@@ -16,11 +16,29 @@
     
     <script>
       
-    const parent = document.querySelector('.parrot')
+    // const parent = document.querySelector('.parrot')
       
-    console.log(parent.children[0]) 
-    console.log(parent.children)
-    console.log(parent.children[2].innerHTML)
+    // console.log(parent.children[0]) 
+    // console.log(parent.children)
+    // console.log(parent.children[2].innerHTML)
+
+    // const newEle = document.createElement('div');
+    // newEle.innerHTML = 'SUN'
+    // newEle.className= 'DAY'
+
+    // parent.appendChild(newEle);
+
+
+   const parent = document.querySelector('.parrot');
+
+   console.log(parent.children[2]);
+   console.log(parent.children[2].innerHTML);
+   console.log(parent.className);
+
+//    parent.children[2].innerHTML = 'rugby';
+   parent.children[2].appendChild(document.createTextNode('mereRabba'));
+//    parent.children[2].innerHTML = 'rugby';
+   console.log(parent.children[2].innerHTML);
 
 
     </script>
