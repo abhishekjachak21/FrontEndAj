@@ -2,15 +2,15 @@
 //--------------------------------------------------------------
 ///object destructuring
 
-const Life = {human: "fuckedUp",
-        animals: "atPeace",
-        trees: "windy",
-        kutti: true};
+// const Life = {human: "fuckedUp",
+//         animals: "atPeace",
+//         trees: "windy",
+//         kutti: true};
 
-const {human, animals: ani, trees, kutti } = Life;
+// const {human, animals: ani, trees, kutti } = Life;
 
-console.log(trees);
-console.log(ani);
+// console.log(trees);
+// console.log(ani);
 
 //--------------------------------------------------------------
 
@@ -45,24 +45,24 @@ console.log(ani);
 ///IMP concept, users value aayegi tab array mei aayegi.
 ///...thats why Array of objects
 
-// const users =[
-//     {
-//         namee : "abhi",
-//         from : "pune"
-//     },
-//     {
-//         namee : "yash",
-//         from : "aurangabad"
-//     },
-//     {
-//         namee : "vivek",
-//         from : "indapur"
-//     }
-// ]
+const users =[
+    {
+        namee : "abhi",
+        from : "pune"
+    },
+    {
+        namee : "yash",
+        from : "aurangabad"
+    },
+    {
+        namee : "vivek",
+        from : "indapur"
+    }
+]
 
-// console.log(users[0]);
-// console.log(users[0].namee);
-// console.log(users[0].from);
+console.log(users[0]);
+console.log(users[0].namee);
+console.log(users[0].from);
 //--------------------------------------------------------------
 
 
