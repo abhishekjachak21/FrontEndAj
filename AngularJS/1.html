@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn directives</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+
+
+
+<body>
+ 
+    <div ng-init="StuNames=[
+    {name:'Abhi',age:'21'},
+    {name:'Sneha', age:'19'},
+    {name:'Kaki', engName:'aunty'}]"></div>
+     
+    <p>What is name of Boy: {{StuNames[0].name}}</p>
+    <p>What is name of Girl: {{StuNames[1].name}}</p>
+
+
+//simple error were thr,like forgotten comma, given = insted of :
+
+</body>
+
+
+
+
+
+<!-- <body style="background-color: {{color}}; ">
+
+    <div>
+        Colour Name: <input type="text" ng-model="color">
+    </div><br>
+    
+    color based upon what we give
+</body> -->
+
+
+
+
+
+<!-- <body>
+    model and binding
+
+   {{"abhi"}}   
+    {{6+3}}
+
+    <div>
+        College Name: <input type="text" ng-model="collegeName">
+    </div><br>
+    
+    <div>
+        Name of the clg: {{collegeName}}
+    </div>
+
+    <h1 ng-bind="collegeName"></h1>
+</body> -->
+</html>
