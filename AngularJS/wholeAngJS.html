@@ -24,6 +24,9 @@
 <a href="#!/about">Go to About</a>
 <div ng-view></div>
 
+<div ng-view>
+
+</div>
     <!-- Example of Using a Filter -->
     <p>Uppercase Name: {{ name | uppercase }}</p>
 
@@ -45,18 +48,15 @@
         });
 
         // Example of Routing
-    //     MyAppu.config(function($routeProvider, $locationProvider) {
-    // $routeProvider
-    //     .when('/about', {
-    //         templateUrl: 'about.html'
-    //     })
-    //     .otherwise({
-    //         redirectTo: '/'
-    //     });
-
-//     // Add this line to enable hashbang mode
-//     $locationProvider.hashPrefix('!');
-// });
+        MyAppu.config(function($routeProvider) {
+    $routeProvider
+        .when('/about', {
+            templateUrl: 'about.html'
+        })
+        .otherwise({
+            redirectTo: '/wholeAngJS.html'
+        });
+});
 
         MyAppu.controller("myCtrol", function($scope, randomNumberService){
             $scope.name = "abhya";
