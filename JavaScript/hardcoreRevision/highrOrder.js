@@ -1,33 +1,52 @@
 //Revision->17 Feb 2024
 //topics covered->
-//var let const
-//arrow function
-// callback fun
 // higher order fun, map, filter, reduce, foreach
+
+
+
+///-----------------------------------------------------
+///map
+
+const arr = [2,8,4,9,0];
+
+// const arr2 = arr.map( (item) => {return item*5}  )
+// const arr2 = arr.map( (item) => ( item*5)  )
+const arr2 = arr.map( (item) => ( item+5)  )
+
+console.log(arr2);
+
+///-----------------------------------------------------
+
+
+
+
+
+
 
 
 ///-----------------------------------------------------
 //filter ... syntax ->
-const arr = [2,8,4,9,0];
+// const arr = [2,8,4,9,0];
 
 // const arr2 = arr.filter( (item) => {return item>5}  )
+
+// console.log(arr2);
 
 // 3 diff ways
 // const arr2 = arr.filter( (item) => {return item>5} )   //R
 // const arr2 = arr.filter( (item) => { item>5} )    //Wrong approach
 // const arr2 = arr.filter( (item) => ( item>5 ) )      //R
-const arr2 = arr.filter( (item) =>  item>5   )            //R
-
-
-console.log(arr2);
+// const arr2 = arr.filter( (item) =>  item>5   )            //R
 ///-----------------------------------------------------
 
 
 
 
+
+
+
+
 /*
-
-
 ///===========================================
 // array.filter(callbackFn, thisArg)   ....same for map,reduce
 
@@ -197,56 +216,6 @@ buckle(2,3,uncle);
 // buckle(2, 3, uncleFunc);
 
 ///-----------------------------------------------------
-
-
-
-
-
-
-
-
-///-----------------------------------------------------
-//arrow function
-
-// const bruh = (a,b) => console.log(a*b) ;
-// bruh(2,4);
-
-
-// const bruh = (a,b) => console.log(a*b) ;
-// console.log(bruh(2,5));
-
-
-// const bruh = (a,b) => a*b ;
-// console.log(bruh(2,5));
-
-
-const bruh = (a,b) => { return a*b };
-console.log(bruh(2,5));
-
-
-if(bruh(1,6)) console.log("true");
-else console.log("False");
-
-console.log(bruh(2,7));
-///-----------------------------------------------------
-
-
-
-
-
-
-///-----------------------------------------------------
-///var let const
-// var yu = 89;
-// let yy = 90;
-// const zz = 91;
-// yu=5900
-// console.log(yu);
-
-// yy = 9000;
-// // zz=yy;
-
-// console.log(yy);
-// console.log(zz);
-///-----------------------------------------------------
 */
+
+
