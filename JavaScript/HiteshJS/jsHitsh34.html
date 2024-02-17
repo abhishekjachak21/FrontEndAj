@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>34th lec of JS</title>
+</head>
+<body style="background-color: black; color: yellow;">
+    
+   <ul class="languages">
+       <li class="lang">C++</li>
+       <li class="lang">JAVA</li>
+   </ul>
+
+<script>
+
+
+
+//   function addLang(lang){
+//     const addEle = document.createElement('li');
+//     addEle.innerHTML = lang;
+//     const parentEle = document.querySelector('.languages');
+//     parentEle.appendChild(addEle)
+//   }
+  
+//   addLang('python');
+//   addLang('JavaScript');
+
+//for optimization
+//innerHTML element makes tree traversing
+//so instead of innerHTML, appendChild is good
+
+   function addLangOpti(lang){
+    const addEle = document.createElement('li');
+    addEle.appendChild(document.createTextNode(lang));
+    const parentEle = document.querySelector('.languages');
+    parentEle.appendChild(addEle)
+   }
+   
+   addLangOpti("JavaScript")
+   addLangOpti("TypeScript")
+   addLangOpti("Rooby")
+
+
+//initial Try and mistake
+/* function addLang(lang){
+    const addEle = document.createElement('li');
+    addEle.innerHTML = lang;
+    const parentEle = document.getElementById('ul');
+    parentEle.appendChild(addEle)
+  }
+  
+  addLang(python);
+ */
+
+
+</script>
+
+
+</body>
+</html>
