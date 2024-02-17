@@ -1,19 +1,14 @@
 //Revision->17 Feb 2024
 //topics covered->
-// higher order fun, map, filter, reduce, foreach
-
+//callback fun
+// higher order fun..forEach &  map-filter-reduce
 
 
 ///-----------------------------------------------------
-///map
+// merging map-filer-reduce
 
-const arr = [2,8,4,9,0];
 
-// const arr2 = arr.map( (item) => {return item*5}  )
-// const arr2 = arr.map( (item) => ( item*5)  )
-const arr2 = arr.map( (item) => ( item+5)  )
 
-console.log(arr2);
 
 ///-----------------------------------------------------
 
@@ -23,8 +18,48 @@ console.log(arr2);
 
 
 
+///-----------------------------------------------------
+// forEach vs map-filer-reduce
+
+
+
 
 ///-----------------------------------------------------
+
+
+
+
+
+
+
+
+///-------------------------reduce----------------------------
+// main purpose of the reduce function in JavaScript is to reduce an array to a single value.
+//reduce synatx:  reduce(callbackFn, initialValue)
+// const initialValue = 0;
+// const sumWithInitial = array1
+//   .reduce(  (accumulator, currentValue)=>accumulator+currentValue, initialValue);
+
+const arr4 = [4,5,6];
+
+const initial = 5;
+const arr5 = arr4
+            .reduce( (a,b)=>{ return a+b}, initial );
+
+console.log(arr5);
+///-----------------------------------------------------
+
+
+
+
+
+
+
+
+
+/*
+
+///--------------------filter---------------------------------
 //filter ... syntax ->
 // const arr = [2,8,4,9,0];
 
@@ -37,16 +72,10 @@ console.log(arr2);
 // const arr2 = arr.filter( (item) => { item>5} )    //Wrong approach
 // const arr2 = arr.filter( (item) => ( item>5 ) )      //R
 // const arr2 = arr.filter( (item) =>  item>5   )            //R
-///-----------------------------------------------------
 
 
 
 
-
-
-
-
-/*
 ///===========================================
 // array.filter(callbackFn, thisArg)   ....same for map,reduce
 
@@ -63,11 +92,20 @@ console.log(arr2);
 ///===========================================
 
 
-
-
-
-
 ///-----------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+///-----------------map------------------------------------
+// main purpose of the map function in JavaScript is to transform elements of an array into a new array based on a transformation function applied to each element
+
 //map ... syntax ->
 //  arrayName.map(function (currElement, currElementIndex, currElementArr) {},  this);
 
@@ -84,14 +122,21 @@ console.log(arr2);
 //     else return num*2;
 // });
 
+
+///-----
+
+
+
 // console.log(doubledNumbers); 
+// const arr = [2,8,4,9,0];
+
+// // const arr2 = arr.map( (item) => {return item*5}  )
+// // const arr2 = arr.map( (item) => ( item*5)  )
+// const arr2 = arr.map( (item) => ( item+5)  )
+
+// console.log(arr2);
 
 ///-----------------------------------------------------
-
-
-
-
-
 
 
 
