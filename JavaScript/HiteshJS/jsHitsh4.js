@@ -1,12 +1,17 @@
 var accountCode = 'Abcd'
 let accountId = 12345
 const accountPassword = '@123'
-accountNo = 'w2'
+accountNo =678
  
+console.log(accountCode);
+console.log(accountId);
 console.log(accountPassword);
-console.log(accountId);
 console.log(accountNo);
-console.log(accountId);
+console.log(typeof accountNo);
+console.log(typeof undefined);
+
+console.table([accountCode, accountId, accountPassword, accountNo])
 
 
-console.log(typeof null);
+// =---------=-----=------=------=
+//NOTE: dont use VAR, only use const, let
