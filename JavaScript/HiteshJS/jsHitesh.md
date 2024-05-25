@@ -14,3 +14,8 @@ Total datatypes:
 - undefined
 - null
 - symbol
+
+convert "67" into number Number("67") 
+
+
+for..of loop, new Map()

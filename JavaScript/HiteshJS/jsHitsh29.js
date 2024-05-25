@@ -1,52 +1,13 @@
-
-/////-------------------------------------------------
-///after 20min lec
-
-
-// const num = [1,2,3,4,5,"Hehe"]
-const num = [11,22,33,44,55]
-
-num.forEach( function(item){   //mast ekdam bruh
-    console.log(item*3);
-})
-
-
-
-///arrow function ====  function() , arrow=>
-// fuk = () =>  console.log("hei")
-// fuk = () => (  console.log("hei")  )
-fuk = () => console.log("hei abhishek,come on")
-
-fuk();
-
-num.forEach( function(val, index, num) {
-    console.log(val,index,num)
-})
-
-
-
-const animals = ["frog","deer","tiger","cat"]
-
-animals.forEach (
-      function (ele) {
-            console.log(ele);
-      }
-)
-////in short, foreach loop =>  arryName.forEach( function(){ }   )
-
-//jk.foreach( function  )
-//jk.foreach( function(){} ) 1st way or
-//jk.foreach( () => {}  ) 2nd way
+/*
+////discussed in videos (24 may 2024. after nearly 6-8 months)
+-> for...of loop
+-> Map
+-> for...in loop
 
 
 
 
-/////-------------------------------------------------
-
-
-
-
-
+*/
 
 
 
@@ -63,7 +24,7 @@ animals.forEach (
 
 
 // const wordd = "Heelo Brother"  
-// // const wordd = "Helo Brother"  
+// // // const wordd = "Helo Brother"  
 
 // for(const i of wordd)
 //   console.log(i);
@@ -71,29 +32,33 @@ animals.forEach (
 
 
 
-///maps///
+///map:           new Map([ [],[],[]  ])
 
 // Create a map
 // const fruits = new map([
 //     ["apples", 500],
 //     ["bananas", 300],
-//     ["oranges", 200]
+//     ["oranges", 200], [30, 900], [67, "8u"]
 //   ]);
 
 //   console.log(fruits);
 
 
-// const fruits = new Map();  //case sensitive -> its Map, not map
-//     fruits.set('apples', "500")
-//     fruits.set('bananas', "300")
-//     fruits.set('oranges', "200")
+
+const fruits = new Map([     //case sensitive -> its Map, not map
+    ["apples", 500],
+    ["bananas", 300],
+    ["oranges", 200], [30, 900], [67, "8u"]
+  ]);
+
+  console.log(fruits);
   
 
-// //   console.log(fruits);
 
-// for(const [key,val] of fruits)  
-//    console.log(key,val);
-
+for(const key of fruits)  
+   console.log(key);
+for(const [key,val] of fruits)  
+  console.log(key,":",val);
 
 
 ///for..in loop///
@@ -105,7 +70,7 @@ animals.forEach (
 // }
 
 // for(const ele in anaconda)
-//     console.log(`Key is a ${ele},and value is ${anaconda[ele]}`)
+//     console.log(`Key is ${ele} and value is ${anaconda[ele]}`)
 
 
 //for in loop fetches KEY in obj, but also in array too,
@@ -114,5 +79,56 @@ animals.forEach (
 
 
 //also map is not iterable so forin loop we cant use
+
+/////-------------------------------------------------
+
+
+
+
+
+
+
+
+/////-------------------------------------------------
+///after 20min lec
+
+
+// const num = [1,2,3,4,5,"Hehe"]
+// const num = [11,22,33,44,55]
+
+// num.forEach( function(item){   //mast ekdam bruh
+//     console.log(item*3);
+// })
+
+
+
+// ///arrow function ====  function() , arrow=>
+// // fuk = () =>  console.log("hei")
+// // fuk = () => (  console.log("hei")  )
+// fuk = () => console.log("hei abhishek,come on")
+
+// fuk();
+
+// num.forEach( function(val, index, num) {
+//     console.log(val,index,num)
+// })
+
+
+
+// const animals = ["frog","deer","tiger","cat"]
+
+// animals.forEach (
+//       function (ele) {
+//             console.log(ele);
+//       }
+// )
+////in short, foreach loop =>  arryName.forEach( function(){ }   )
+
+//jk.foreach( function  )
+//jk.foreach( function(){} ) 1st way or
+//jk.foreach( () => {}  ) 2nd way
+
+
+
 
 /////-------------------------------------------------
