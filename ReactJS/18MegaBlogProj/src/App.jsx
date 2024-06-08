@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import conf from './conf/conf';
 import { useDispatch } from 'react-redux';
 import './App.css';
 import authService from "./appwrite/auth";
 import { login, logout } from "./store/authSlice";
-import { Footer, Header } from './components';
+import { Footer, Header } from './components/index';
 import { Outlet } from 'react-router-dom';
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
       <div className='w-full block'>
         <Header /> {/* Show the top toy */}
         <main>
-          <Outlet /> {/* Show the main toys */}
+          Hi bhai  <Outlet /> {/* Show the main toys */ }
         </main>
         <Footer /> {/* Show the bottom toy */}
       </div>
