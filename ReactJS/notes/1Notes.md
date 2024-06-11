@@ -19,3 +19,4 @@ Avoids Prop Drilling: Eliminates the need to pass props through intermediate com
 
 
 - Reusability: You can now use the <Select> component wherever you need a dropdown.
+
