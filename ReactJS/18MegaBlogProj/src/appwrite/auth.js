@@ -14,55 +14,27 @@ export class AuthService {
             
     }
 
-
-
-    async createAccount({ email, password, name }) {
+    async createAccount({email, password, name}) {
         try {
             const userAccount = await this.account.create(ID.unique(), email, password, name);
             if (userAccount) {
-                // Call another method
-                return this.login({ email, password });
+                // call another method
+                return this.login({email, password});
             } else {
-                return userAccount;
+               return  userAccount;
             }
         } catch (error) {
             throw error;
         }
     }
-    
-    async login({ email, password }) {
+
+    async login({email, password}) {
         try {
-            // Assuming createEmailSession is a method of this.account
-            return await this.account.createEmailSession(email, password);
+            return await this.account.createEmailPasswordSession(email, password);
         } catch (error) {
             throw error;
-        }
+        } //waah bhai jara si method change karni thi bass "createEmailPasswordSession", pehle ye thi " this.account.createEmailSession(email, password);"
     }
-    
-
-
-
-    // async createAccount({email, password, name}) {
-    //     try {
-    //         const userAccount = await this.account.create(ID.unique(), email, password, name);
-    //         if (userAccount) {
-    //             // call another method
-    //             return this.login({email, password});
-    //         } else {
-    //            return  userAccount;
-    //         }
-    //     } catch (error) {
-    //         throw error;
-    //     }
-    // }
-
-    // async login({email, password}) {
-    //     try {
-    //         return await this.account.createEmailSession(email, password);
-    //     } catch (error) {
-    //         throw error;
-    //     }
-    // }
 
     async getCurrentUser() {
         try {
