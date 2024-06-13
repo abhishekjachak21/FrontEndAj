@@ -1,18 +1,39 @@
+
+
+
+
+
+
+
+
+const pinkyPromise = new Promise((resolve,reject)=>{
+   
+})
+
+
+
+
+
+
+
+///nnew upward, sake of revision 
+/////===---------==========--------------==================----------
+
 // syntax: const myPromise = new Promise(function(resolve,reject));
 ////-------------------------------------------------------
 ///creation
-// const PromiseOne = new Promise(function(resolve,reject){
-//     setTimeout(function(){
-//         console.log('Ok bro,its complete');
-//         resolve()
-// },1000 );  //5000
-//     // resolve();
-// });
+const PromiseOne = new Promise(function(resolve,reject){
+    setTimeout(function(){
+        console.log('Ok bro,its complete');
+        resolve()
+},5000 );  //5000
+    // resolve();
+});
 
-// ///consumption
-// PromiseOne.then(function(){
-//         console.log('Promise consumed,yippe!!')
-//     });
+///consumption
+PromiseOne.then(function(){
+        console.log('Promise consumed,yippe!!')
+    });
 ////-------------------------------------------------------
 
 
@@ -106,29 +127,29 @@
 
 
 ////-------------------------------------------------------
-const promiseFour = new Promise(function(resolve,reject){
-        setTimeout(function(){
-            let eror =  true
-            if(eror){
-                reject("Errur: do something bro");
-            }else{
-               resolve({naav:'Raam', Div:'Higher'});
-            }
-        },2000)
-    })
+// const promiseFour = new Promise(function(resolve,reject){
+//         setTimeout(function(){
+//             let eror =  true
+//             if(eror){
+//                 reject("Errur: do something bro");
+//             }else{
+//                resolve({naav:'Raam', Div:'Higher'});
+//             }
+//         },2000)
+//     })
 
+// // async function consumePromiseFour(){
+// //     const response = await promiseFour
+// //     console.log(response);
+// // }
 // async function consumePromiseFour(){
-//     const response = await promiseFour
-//     console.log(response);
-// }
-async function consumePromiseFour(){
-        try{
-        const response = await promiseFour;
-        console.log(response);}
-        catch(eror){           //dont forget to write bracket(error) here
-            console.log(eror);
-        }
-    }
+//         try{
+//         const response = await promiseFour;
+//         console.log(response);}
+//         catch(eror){           //dont forget to write bracket(error) here
+//             console.log(eror);
+//         }
+//     }
 
-consumePromiseFour();
+// consumePromiseFour();
 ////-------------------------------------------------------
