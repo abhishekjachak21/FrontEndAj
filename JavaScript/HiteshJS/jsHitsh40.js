@@ -6,35 +6,57 @@
 
 
 
+
+
+
+
+////-------------------------------------------------------
 const pinkyPromise = new Promise((resolve,reject)=>{
-   
+   setTimeout(() => {
+    const error = 0;
+    if(!error){
+        console.log("Happy")
+        resolve(1234);
+    }else{
+        console.log("Sad");
+        reject(5678);
+    }
+   }, 5000);
 })
 
+pinkyPromise.then((x)=>{
+    console.log("iam then method",x)
+}).catch((y)=>{
+    console.log("I am catch",y)
+}).finally((x)=>{
+    console.log("iam finally done bhai",x)
+})
+////-------------------------------------------------------
 
 
 
 
 
 
-///nnew upward, sake of revision 
+///new upward, sake of revision 
 /////===---------==========--------------==================----------
 
 // syntax: const myPromise = new Promise(function(resolve,reject));
 ////-------------------------------------------------------
 ///creation
-const PromiseOne = new Promise(function(resolve,reject){
-    setTimeout(function(){
-        console.log('Ok bro,its complete');
-        resolve()
-},5000 );  //5000
-    // resolve();
-});
+// const PromiseOne = new Promise(function(resolve,reject){
+//     setTimeout(function(){
+//         console.log('Ok bro,its complete');
+//         resolve()
+// },5000 );  //5000
+//     // resolve();
+// });
 
-///consumption
-PromiseOne.then(function(){
-        console.log('Promise consumed,yippe!!')
-    });
-////-------------------------------------------------------
+// ///consumption
+// PromiseOne.then(function(){
+//         console.log('Promise consumed,yippe!!')
+//     });
+// ////-------------------------------------------------------
 
 
 
