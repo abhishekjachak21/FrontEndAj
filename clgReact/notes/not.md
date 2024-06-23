@@ -1,0 +1,1 @@
+form se page reload refresh hota h, but e.preventDefault() istemaal karke ham vo avoid kar sakte h
