@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning local Storage</title>
+</head>
+<body>
+    
+ 
+        <h1>Remembering Your Name</h1>
+        <label for="nameInput">Enter your name:</label>
+        <input type="text" id="nameInput">
+        <button onclick="saveName()">Save Name</button>
+        
+        <h2>Stored Names:</h2>
+        <p><strong>localStorage:</strong> <span id="localStorageName"></span></p>
+        <p><strong>sessionStorage:</strong> <span id="sessionStorageName"></span></p>
+        <p><strong>Cookie:</strong> <span id="cookieName"></span></p>
+        
+        <script>
+
+                // Function to save the name in localStorage, sessionStorage, and as a cookie
+function saveName() {
+    const name = document.getElementById('nameInput').value;
+    
+    // Save to localStorage
+    localStorage.setItem('name', name);
+    
+    // Save to sessionStorage
+    sessionStorage.setItem('name', name);
+    
+    // Save as a cookie (expires in 1 day)
+    document.cookie = `name=${name}; expires=${new Date(Date.now() + 86400000).toUTCString()}; path=/`;
+    
+    // Update the displayed names
+    displayNames();
+}
+
+// Function to get the cookie value by name
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+    return '';
+}
+
+// Function to display the names from localStorage, sessionStorage, and cookies
+function displayNames() {
+    const localStorageName = localStorage.getItem('name') || 'Not set';
+    const sessionStorageName = sessionStorage.getItem('name') || 'Not set';
+    const cookieName = getCookie('name') || 'Not set';
+    
+    document.getElementById('localStorageName').textContent = localStorageName;
+    document.getElementById('sessionStorageName').textContent = sessionStorageName;
+    document.getElementById('cookieName').textContent = cookieName;
+}
+
+// Display the names when the page loads
+displayNames();
+
+
+        </script>
+
+
+</body>
+</html>

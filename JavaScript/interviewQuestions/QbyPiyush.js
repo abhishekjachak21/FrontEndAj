@@ -30,7 +30,7 @@
 //     piyush.sayName()
 // }, 3000);   
 
-// .bind() function banata hai, aur .call() direct call karta h
+// .bind() function assign hai, aur .call() direct call karta h
 ///-------------------------------------------------------------
 
 

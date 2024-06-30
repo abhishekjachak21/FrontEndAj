@@ -1,25 +1,21 @@
-import {Component} from 'react'
+import { Component } from 'react';
 
-export default class AddUser extends
-Component{
-
-    addUser =(e)=>{
+export default class addUser extends
+Component {
+    addUser = (e) => {
         e.preventDefault()
-        alert('user is added')
+        const data=e.target.elements.uname.value
+        this.props.au(data)
     }
-
-    render(){
+    render() {
         return (
-            <>
-            <form>
-
-            <button onClick={this.addUser}> ADD</button>
-
-            </form>
-            <p> Adduser is here</p>
-            </>
+            <span>
+                <form onSubmit={this.addUser}>
+                    <input type='text' name='uname'/>
+                <button className='btn btn-primary' >Add</button>
+                </form>
+               
+            </span>
         )
     }
-    
-    
 }
