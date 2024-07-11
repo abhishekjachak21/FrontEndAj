@@ -57,68 +57,68 @@ import React, { useState, useEffect, useContext, createContext, useReducer, useR
 
 // ///--------------------------------------------------------
 // // 1. Create a Walkie-Talkie
-// const MagicWalkieTalkie = createContext();
+const MagicWalkieTalkie = createContext();
 
-// function Friend() {
-//   // 3. Receive Information
-//   const message = useContext(MagicWalkieTalkie);
-//   return <h1>Friend's Message: {message}</h1>;
-// }
+function Friend() {
+  // 3. Receive Information
+  const message = useContext(MagicWalkieTalkie);
+  return <h1>Friend's Message: {message}</h1>;
+}
 
-// function WalkieTalkieGame() {
-//   return (
-//     // 2. Share Information
-//     <MagicWalkieTalkie.Provider value="Hello, Friend!">
-//       <Friend />
-//     </MagicWalkieTalkie.Provider>
-//   );
-// }
-// export default WalkieTalkieGame
-
-// ///--------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-// ///--------------------------------------------------------
-// 1. Set Up the Reducer Function
-const reducer = (state, action) => {
-  switch (action.type) {
-    case 'increment':
-      return { count: state.count + 1 };
-    case 'decrement':
-      return { count: state.count - 1 };
-    default:
-      return state;
-  }
-};
-
-// 2. Define the Initial State
-const initialState = { count: 0 };
-
-const CounterApp = () => {
-  // 3. Use the `useReducer` Hook
-  const [state, dispatch] = useReducer(reducer, initialState);
-
+function WalkieTalkieGame() {
   return (
-    <div>
-      <p>Count: {state.count}</p>
-      {/* 4. Handle Actions */}
-      <button onClick={() => dispatch({ type: 'increment' })}>Increment</button>
-      <button onClick={() => dispatch({ type: 'decrement' })}>Decrement</button>
-    </div>
+    // 2. Share Information
+    <MagicWalkieTalkie.Provider value="Hello, Friend!, this is shared ">
+      <Friend />
+    </MagicWalkieTalkie.Provider>
   );
-};
+}
+export default WalkieTalkieGame
 
-export default CounterApp;
 // ///--------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+// ///--------------------------------------------------------
+// // 1. Set Up the Reducer Function
+// const reducer = (state, action) => {
+//   switch (action.type) {
+//     case 'increment':
+//       return { count: state.count + 1 };
+//     case 'decrement':
+//       return { count: state.count - 1 };
+//     default:
+//       return state;
+//   }
+// };
+
+// // 2. Define the Initial State
+// const initialState = { count: 0 };
+
+// const CounterApp = () => {
+//   // 3. Use the `useReducer` Hook
+//   const [state, dispatch] = useReducer(reducer, initialState);
+
+//   return (
+//     <div>
+//       <p>Count: {state.count}</p>
+//       {/* 4. Handle Actions */}
+//       <button onClick={() => dispatch({ type: 'increment' })}>Increment</button>
+//       <button onClick={() => dispatch({ type: 'decrement' })}>Decrement</button>
+//     </div>
+//   );
+// };
+
+// export default CounterApp;
+// // ///--------------------------------------------------------
 
 
 
