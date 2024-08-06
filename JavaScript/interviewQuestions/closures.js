@@ -8,17 +8,42 @@
 
 //closure = function along with scope (simple defination)
 
-//==============================================
-    function makeFunc() {
-        var name = "Mozilla";
-        function displayName() {
-            console.log(name);
-        }
-        name = "Akshay"
-        return displayName;   //return karne se jo bhi uss func se jude hue h vo bhi return ho jate h pura scope return hota h
-    }
 
-    const myFunc = makeFunc();
-    console.log(myFunc);
-    myFunc();
+
+
 //==============================================
+function x(){
+    var a = 25;
+    function y(){
+        console.log(a);
+    }
+    y();
+}
+x();
+//==============================================
+
+
+
+
+
+
+
+
+
+
+
+
+// //==============================================
+    // function makeFunc() {
+    //     var name = "Mozilla";
+    //     function displayName() {
+    //         console.log(name);
+    //     }
+    //     name = "Akshay"
+    //     return displayName;   //return karne se jo bhi uss func se jude hue h vo bhi return ho jate h pura scope return hota h
+    // }
+
+    // const myFunc = makeFunc();
+    // console.log(myFunc);
+    // myFunc();
+// //==============================================
