@@ -15,4 +15,4 @@ function App() {
   )
 }
 
-export default Appkjjj
+export default App

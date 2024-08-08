@@ -8,6 +8,7 @@ import About from './components/About/About'
 import Contact from './components/Contact/Contact'
 import User from './components/User/User'
 import Github, { githubInfoLoader } from './components/Github/Github'
+// import Health from './components/Health/Health'
 // import { Route } from 'react-router-dom'
 
 // const router = createBrowserRouter([
