@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fintech Platform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        input {
+            margin: 5px 0;
+            padding: 8px;
+            width: 200px;
+        }
+        button {
+            padding: 8px 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fintech Platform</h1>
+
+    <div>
+        <h2>Create User</h2>
+        <form id="createUserForm">
+            <input type="text" id="name" placeholder="Name" required />
+            <input type="email" id="email" placeholder="Email" required />
+            <button type="submit">Create User</button>
+        </form>
+        <div id="userResponse"></div>
+    </div>
+
+    <div>
+        <h2>Get Account</h2>
+        <form id="getAccountForm">
+            <input type="text" id="userId" placeholder="User ID" required />
+            <button type="submit">Get Account</button>
+        </form>
+        <div id="accountResponse"></div>
+    </div>
+
+    <div>
+        <h2>Deposit</h2>
+        <form id="depositForm">
+            <input type="text" id="depositAccountId" placeholder="Account ID" required />
+            <input type="number" id="depositAmount" placeholder="Amount" required />
+            <button type="submit">Deposit</button>
+        </form>
+        <div id="depositResponse"></div>
+    </div>
+
+    <div>
+        <h2>Withdraw</h2>
+        <form id="withdrawForm">
+            <input type="text" id="withdrawAccountId" placeholder="Account ID" required />
+            <input type="number" id="withdrawAmount" placeholder="Amount" required />
+            <button type="submit">Withdraw</button>
+        </form>
+        <div id="withdrawResponse"></div>
+    </div>
+
+    <script>
+        const apiUrl = 'http://localhost:3000'; // Point to the Node.js server
+
+        document.getElementById('createUserForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+
+    const response = await fetch(`${apiUrl}/createUser`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email })
+    });
+
+    if (response.ok) {
+        const data = await response.json();
+        document.getElementById('userResponse').innerText = `User Created: ${data.name} (${data.email})`;
+
+        // Fetch the account ID for the created user
+        const accountResponse = await fetch(`${apiUrl}/getAccount/${data._id}`);
+        const accounts = await accountResponse.json();
+        const accountIds = accounts.map(account => account._id).join(', ');
+        document.getElementById('userResponse').innerText += `\nAccount ID(s): ${accountIds}`;
+    } else {
+        const error = await response.json();
+        document.getElementById('userResponse').innerText = `Error: ${error.error}`;
+    }
+});
+
+
+        document.getElementById('getAccountForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const userId = document.getElementById('userId').value;
+
+            const response = await fetch(`${apiUrl}/getAccount/${userId}`);
+            const data = await response.json();
+            document.getElementById('accountResponse').innerText = JSON.stringify(data, null, 2);
+        });
+
+        document.getElementById('depositForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const accountId = document.getElementById('depositAccountId').value.trim();
+    const amount = parseFloat(document.getElementById('depositAmount').value);
+
+    if (!accountId.match(/^[0-9a-fA-F]{24}$/)) {
+        document.getElementById('depositResponse').innerText = 'Invalid Account ID';
+        return;
+    }
+
+    const response = await fetch(`${apiUrl}/deposit`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ accountId, amount })
+    });
+
+    if (response.ok) {
+        const data = await response.json();
+        document.getElementById('depositResponse').innerText = `Deposited: ${data.amount}`;
+    } else {
+        const error = await response.json();
+        document.getElementById('depositResponse').innerText = `Error: ${error.error}`;
+    }
+});
+
+
+        document.getElementById('withdrawForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const accountId = document.getElementById('withdrawAccountId').value;
+            const amount = document.getElementById('withdrawAmount').value;
+
+            const response = await fetch(`${apiUrl}/withdraw`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ accountId, amount })
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                document.getElementById('withdrawResponse').innerText = `Withdrawn: ${data.amount}`;
+            } else {
+                const error = await response.json();
+                document.getElementById('withdrawResponse').innerText = `Error: ${error.error}`;
+            }
+        });
+    </script>
+</body>
+</html>
