@@ -8,10 +8,9 @@
 
 //closure = function along with scope (simple defination)
 
-// Disadvantages of Closures in JavaScript 😅
-// Overconsumption of memory or memory leaks can happen.
-//read for more "https://www.freecodecamp.org/news/javascript-interview-prep-cheatsheet/#javascriptbasics"
-
+// // so ok closures means, adhi apan baherch function invoke karnar, invoke 
+// //kelela function aatlya function la alert mode vr aananr, then jevha mi
+// //aatla function call karnar tevha direct final result yenar.
 
 //===========================Updated, final understanding of it, on 7 aug 2024===================
 // //currying
@@ -23,13 +22,30 @@
   
 //   let addByTwo = add(2)
 //   addByTwo(3)
-// // so ok closures means, adhi apan baherch function invoke karnar, invoke 
-// //kelela function aatlya function la alert mode vr aananr, then jevha mi
-// //aatla function call karnar tevha direct final result yenar.
+// =======================================
+
+
+
+// ======CLOSURE CLOSED=================================
+//bhai bhai se nhi le sakta but bhai baap se le sakta hai,
+// but baap bhi apne beto se nhi le sakta
+
+// FINAL CLOSURE: Function with its lexical scope.
+//inner 10th fun can also access 1st layer fun values, its bcz lexical scope.
+// so when innermost fun returns, it gets returned with with whole lexical scope(lexical env values.)
+
+//aaj final closure samajlay(18-08-2024) ; but technically, its 19-08-2024, 01:34AM
 //==============================================
 
 
 
+
+
+
+
+// Disadvantages of Closures in JavaScript 😅
+// Overconsumption of memory or memory leaks can happen.
+//read for more "https://www.freecodecamp.org/news/javascript-interview-prep-cheatsheet/#javascriptbasics"
 
 
 //==============================================

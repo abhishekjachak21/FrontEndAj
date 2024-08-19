@@ -1,11 +1,78 @@
 
 
 
+//==============================================
+function bigRoom() {
+    let toy1 = "Car"; // This toy is in the big room
+  
+    function smallRoom() {
+      let toy2 = "Ball"; // This toy is in the small room
+  
+      console.log(toy1); // You can see the Car from the small room
+      console.log(toy2); // You can see the Ball in the small room
+    }
+
+    function midRoom() {
+        let toy3 = "Ball00n"; // This toy is in the small room
+    
+        console.log(toy1); // You can see the Car from the small room
+        console.log(toy2); // You can see the Ball in the small room
+        console.log(toy3); // You can see the Ball in the mid room
+      }
+  
+    // smallRoom(); // You go to the small room
+    midRoom();
+    // console.log(toy2); // You can't see the Ball from the big room (closed door)
+  }
+  
+  bigRoom(); // You start in the big room
+  
+  
+
+
+// function x(){
+//     var a = 25;
+//     function y(){
+//         console.log(a);
+//     }
+//     y();
+// }
+// x();
+
+    // function makeFunc() {
+    //     var name = "Mozilla";
+    //     function displayName() {
+    //         console.log(name);
+    //     }
+    //     name = "Akshay"
+    //     return displayName;   //return karne se jo bhi uss func se jude hue h vo bhi return ho jate h pura scope return hota h
+    // }
+
+    // const myFunc = makeFunc();
+    // console.log(myFunc);
+    // myFunc();
+
+//==============================================
+
+
+
+
+
+
 ///-------------------------------------------------
-
-
-
-
+// function c(){
+   
+//     a()
+//     function a(){
+//     //   console.log(b);
+//       d()
+//     function d(){
+//       console.log(b);
+//     }
+//     }
+// }
+// var b = 28;
+// c()
 
 ///-------------------------------------------------
 
