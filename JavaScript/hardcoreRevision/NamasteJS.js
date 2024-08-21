@@ -1,31 +1,70 @@
 
 
 
-//==============================================
-function bigRoom() {
-    let toy1 = "Car"; // This toy is in the big room
-  
-    function smallRoom() {
-      let toy2 = "Ball"; // This toy is in the small room
-  
-      console.log(toy1); // You can see the Car from the small room
-      console.log(toy2); // You can see the Ball in the small room
-    }
 
-    function midRoom() {
-        let toy3 = "Ball00n"; // This toy is in the small room
+//==============================================
+// setTimeout(() => {
+//   console.log("timeee");
+// }, 5000);
+
+// function x(y){
+//   console.log("x");
+//   y();
+// }
+// x(function y(){
+//   console.log("y");
+// })
+
+
+
+async function fetchData() {
+  console.log("Fetching data...");
+  const data = await new Promise(resolve => {
+      setTimeout(() => {
+          resolve("Data received!");
+      }, 3000); // Simulate a 3-second fetch
+  });
+  console.log(data);
+}
+
+console.log("Before calling fetchData");
+fetchData();
+console.log("After calling fetchData");
+
+
+
+//==============================================
+
+
+
+
+
+
+//==============================================
+// function bigRoom() {
+//     let toy1 = "Car"; // This toy is in the big room
+  
+//     function smallRoom() {
+//       let toy2 = "Ball"; // This toy is in the small room
+  
+//       console.log(toy1); // You can see the Car from the small room
+//       console.log(toy2); // You can see the Ball in the small room
+//     }
+
+//     function midRoom() {
+//         let toy3 = "Ball00n"; // This toy is in the small room
     
-        console.log(toy1); // You can see the Car from the small room
-        console.log(toy2); // You can see the Ball in the small room
-        console.log(toy3); // You can see the Ball in the mid room
-      }
+//         console.log(toy1); // You can see the Car from the small room
+//         console.log(toy2); // You can see the Ball in the small room
+//         console.log(toy3); // You can see the Ball in the mid room
+//       }
   
-    // smallRoom(); // You go to the small room
-    midRoom();
-    // console.log(toy2); // You can't see the Ball from the big room (closed door)
-  }
+//     // smallRoom(); // You go to the small room
+//     midRoom();
+//     // console.log(toy2); // You can't see the Ball from the big room (closed door)
+//   }
   
-  bigRoom(); // You start in the big room
+//   bigRoom(); // You start in the big room
   
   
 
