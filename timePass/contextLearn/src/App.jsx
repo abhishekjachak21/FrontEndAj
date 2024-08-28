@@ -1,34 +1,22 @@
 
-import React from "react"
+import React,{createContext} from "react"
 import ComA from "./ComA"
 
+var firstname = createContext();
+
 const App = () => {
-  return < ComA />
+  // return < ComA />
+  
+  return(<>
+   <firstname.Provider value={"abhii"}>
+    <ComA />
+   </firstname.Provider>
+  </>)
 }
 
 export default App
+export {firstname};
 
 
 
 
-
-
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-// import './App.css'
-
-// function App() {
-//   const [count, setCount] = useState(0)
-
-//   return (
-//     <>
-//       <div className="bg-indigo-300">
-//       <h1 ><strong>I am </strong>The Abhishek Jachak</h1>
-//       <h1 >The Abhishek Jachak</h1>
-//       </div>
-//     </>
-//   )
-// }
-
-// export default App

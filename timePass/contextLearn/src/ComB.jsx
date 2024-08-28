@@ -1,12 +1,11 @@
 import { comma } from "postcss/lib/list"
 import React from "react"
+import ComC from "./ComC"
 
-const ComA = () => {
+const ComB = () => {
     return (
-        <>
-        <h1>ABhi</h1>
-        </>
+       <ComC/>
     )
 }
 
-export default ComA
+export default ComB

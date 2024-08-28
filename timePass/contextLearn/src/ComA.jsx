@@ -1,11 +1,9 @@
-import { comma } from "postcss/lib/list"
 import React from "react"
+import ComB from "./ComB"
 
 const ComA = () => {
     return (
-        <>
-        <h1>ABhi</h1>
-        </>
+       <ComB/>
     )
 }
 

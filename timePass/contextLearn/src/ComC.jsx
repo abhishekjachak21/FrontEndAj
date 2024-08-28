@@ -1,12 +1,34 @@
-import { comma } from "postcss/lib/list"
-import React from "react"
+import React, {useContext} from "react"
+import { firstname } from "./App"
 
-const ComA = () => {
+const ComC = () => {
+   
+    const fn = useContext(firstname);
+
     return (
         <>
-        <h1>ABhi</h1>
+           <h1>I am {fn}</h1>
+           <p>YOU are {fn}, right ?</p>
         </>
     )
 }
 
-export default ComA
+export default ComC
+
+///using createContext() -> Provider -> Consumer model
+
+// const ComC = () => {
+//     return (
+//         <>
+//         <firstname.Consumer>
+//           {(nm)=>{
+//            return  <h1>I am {nm}</h1>
+//           }}
+//         </firstname.Consumer>
+//         </>
+//     )
+// }
+
+
+
+

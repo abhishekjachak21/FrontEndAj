@@ -1,7 +1,102 @@
+//Revision->28-08-2024
+//topics covered->
+// higher order fun, eg -> forEach,map-filter-reduce
+
+
+////================================================================
+//Example for higher order function:
+
+// const radius = [1, 2, 3];
+// // function to calculate area of the circle
+// const calculateArea =  function (radius) {
+//     const output = [];
+//     for(let i = 0; i< radius.length; i++){
+//         output.push(Math.PI * radius[i] * radius[i]);
+//     }
+//     return output;
+// }
+// // function to calculate diameter of the circle
+// const calculateDiameter =  function (radius) {
+//     const output = [];
+//     for(let i = 0; i< radius.length; i++){
+//         output.push(2 * radius[i]);
+//     }
+//     return output;
+// }
+// console.log(calculateArea(radius));
+// console.log(calculateDiameter(radius))
+
+//-----
+
+
+// const radius = [1, 2, 3];
+
+// const area = function(radius){
+//     return Math.floor(Math.PI * radius * radius);
+// }
+
+// const diameter = function(radius){
+//     return 2 * radius;
+// }
+
+// const calculate = function(radius, logic){ 
+//     const output = [];
+//     for(let i = 0; i < radius.length; i++){
+//         output.push(logic(radius[i]))
+//     }
+//     return output;
+// }
+
+// console.log(calculate(radius, diameter));
+// console.log(calculate(radius, area));
+
+
+////================================================================
+
+
+
+
+
+
+
+////================================================================
+///what is Higher order function and what is callback function ?
+// Breaking It Down:
+// "Khana khane ke baad bartan andar rakh" is like a higher-order function.
+// "Bartan andar rakh" is like the callback function.
+// How It Works:
+// The higher-order function (khana khane ke baad bartan andar rakh) does something (e.g., eating food) and then calls another function when it’s done (bartan andar rakh).
+// The callback function (bartan andar rakh) is the action that gets executed after the main task is completed.
+// In this analogy:
+
+// Khana khana (eating food) is the main task.
+// Bartan andar rakh (putting the dishes away) is the additional task that happens after, which is like the callback function being executed after the main function is done.
+// So yes, in this context, "bartan andar rakh" is acting like a callback function that gets executed after the main action (eating) is completed.
+////================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///-----------------------------------------------------
+///-----------------------------------------------------
 //Revision->17 Feb 2024
 //topics covered->
 //callback fun
 // higher order fun..forEach &  map-filter-reduce
+
 
 
 ///-----------------------------------------------------
@@ -45,9 +140,8 @@
 
 const arr4 = [4,5,6];
 
-const initial = 5;
-const arr5 = arr4
-            .reduce( (a,b)=>{ return a+b}, initial );
+const initial = 20;
+const arr5 = arr4.reduce((a,b)=> a+b, initial );
 
 console.log(arr5);
 ///-----------------------------------------------------
@@ -186,7 +280,7 @@ console.log(arr5);
 
 
 ///-----------------------------------------------------
-
+*/
 
 
 
@@ -197,34 +291,34 @@ console.log(arr5);
 ///-----------------------------------------------------
 // Higher-order function
 
-function performOperation(k,callback) {
-    console.log('Performing operation...');
-    callback(); 
-}
+// function performOperation(k,callback) {
+//     console.log('Performing operation...');
+//     callback(); 
+// }
 
-function logMessage() {
-    console.log('Operation completed!');
-}
+// function logMessage() {
+//     console.log('Operation completed!');
+// }
 
-performOperation(console.log(2 * 3),logMessage);
+// performOperation(console.log(2 * 3),logMessage);
 
 
 
 // Higher-order function - AI Generated
 
-function performOperation(...callbacks) {
-    console.log('Performing operation...');
-    callbacks.forEach(callback => callback()); // Execute each callback function
-}
+// function performOperation(...callbacks) {
+//     console.log('Performing operation...');
+//     callbacks.forEach(callback => callback()); // Execute each callback function
+// }
 
-// Callback function
-const logMessage = () => console.log('Operation completed!');
+// // Callback function
+// const logMessage = () => console.log('Operation completed!');
 
-// Callback function
-const k = () => console.log(2 * 3);
+// // Callback function
+// const k = () => console.log(2 * 3);
 
-// Call the higher-order function with multiple callback functions
-performOperation(k, logMessage);
+// // Call the higher-order function with multiple callback functions
+// performOperation(k, logMessage);
 
 ///-----------------------------------------------------
 
@@ -238,14 +332,14 @@ performOperation(k, logMessage);
 ///-----------------------------------------------------
 //callbackfunction
 
-function buckle(l,m,uncle){
-    console.log(l*m*uncle(4,5));
-}
+// function buckle(l,m,uncle){
+//     console.log(l*m*uncle(4,5));
+// }
 
 
-const buckle = (l,m,uncle) =>  console.log(l*m*uncle(4,5));
-var uncle = (a,b) => a+b ;
-buckle(2,3,uncle);
+// const buckle = (l,m,uncle) =>  console.log(l*m*uncle(4,5));
+// var uncle = (a,b) => a+b ;
+// buckle(2,3,uncle);
 
 
 // function buckle(l,m,n){
@@ -264,6 +358,6 @@ buckle(2,3,uncle);
 // buckle(2, 3, uncleFunc);
 
 ///-----------------------------------------------------
-*/
+
 
 
