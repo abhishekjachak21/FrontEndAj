@@ -1,8 +1,8 @@
 
-import './App.css'
+import './index.css'   //learnt usereducer from this file
 import { useReducer } from 'react'
 
-function App() {
+const App = () => {
   // const [count, setCount] = useState(0)
   const initstate = {
     car : 45,
@@ -12,7 +12,7 @@ function App() {
 
    const reduceBro = (state, action) => {  //action comes from stateDispatch, action decides further state 
     
-      console.log(state.count, action);
+      console.log(state.count, state, action);
       
       // if(action.type === "INC")  return state+10;
       // else if(action.thopo === "DEC") return state-10;
@@ -22,7 +22,7 @@ function App() {
         // case "INC":
         //    return state+10;
         //    break;
-        case "INC":
+        case "INC":   //return object
            return {
             ...state,
             count:state.count+10}

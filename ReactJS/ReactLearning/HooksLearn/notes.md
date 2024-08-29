@@ -8,9 +8,10 @@
 7. useRef 
 
 
-
-# useContext:(thapa technical video)
-for usecontext we need only createContext(). assign it to variable, and then it pass through provider
+(refer thapa technical videos)
+# useContext =>
+- for usecontext we need only createContext(). assign it to variable, and then it pass through provider
+- then extract passed value, using useContext in consumer component.
 
 # useReducer=>
 - syntax:  const [state, dispatch] = useReducer(reducerFun, initialstate),  reducer is function
