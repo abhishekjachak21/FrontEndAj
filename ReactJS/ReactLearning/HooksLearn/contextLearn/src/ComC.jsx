@@ -8,7 +8,7 @@ const ComC = () => {
     return (
         <>
            <h1>I am {fn}</h1>
-           <p>YOU are {fn}, right ?</p>
+           <p className="text-4xl">YOU are {fn}, right ?</p>
         </>
     )
 }
