@@ -18,14 +18,14 @@
 ///-----------------------------------------------------
 //callbackfunction
 
-function buckle(l,m,uncle){
-    console.log(l*m*uncle(4,5));
-}
+// function buckle(l,m,uncle){
+//     console.log(l*m*uncle(4,5));
+// }
 
 
-const buckle = (l,m,uncle) =>  console.log(l*m*uncle(4,5));
-var uncle = (a,b) => a+b ;
-buckle(2,3,uncle);
+// const buckle = (l,m,uncle) =>  console.log(l*m*uncle(4,5));
+// var uncle = (a,b) => a+b ;
+// buckle(2,3,uncle);
 
 
 // function buckle(l,m,n){
@@ -71,7 +71,7 @@ const bruh = (a,b) => { return a*b };
 console.log(bruh(2,5));
 
 
-if(bruh(1,6)) console.log("true");
+if(bruh(1,6)) console.log("mayuresh");
 else console.log("False");
 
 console.log(bruh(2,7));

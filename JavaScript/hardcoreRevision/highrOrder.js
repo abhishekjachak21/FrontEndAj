@@ -99,20 +99,6 @@
 
 
 
-///-----------------------------------------------------
-// merging map-filer-reduce
-
-
-
-
-
-///-----------------------------------------------------
-
-
-
-
-
-
 
 ///-----------------------------------------------------
 // forEach vs map-filer-reduce
@@ -129,21 +115,13 @@
 
 
 
+///-----------------------------------------------------
+// merging map-filer-reduce
 
 
-///-------------------------reduce----------------------------
-// main purpose of the reduce function in JavaScript is to reduce an array to a single value.
-//reduce synatx:  reduce(callbackFn, initialValue)
-// const initialValue = 0;
-// const sumWithInitial = array1
-//   .reduce(  (accumulator, currentValue)=>accumulator+currentValue, initialValue);
 
-const arr4 = [4,5,6];
 
-const initial = 20;
-const arr5 = arr4.reduce((a,b)=> a+b, initial );
 
-console.log(arr5);
 ///-----------------------------------------------------
 
 
@@ -154,7 +132,37 @@ console.log(arr5);
 
 
 
-/*
+
+
+
+
+
+
+
+///-------------------------reduce----------------------------
+// main purpose of the reduce function in JavaScript is to reduce an array to a single value.
+//reduce synatx:  reduce(callbackFn, initialValue)
+// const initialValue = 0;
+// const sumWithInitial = array1
+//   .reduce(  (accumulator, currentValue)=>accumulator+currentValue, initialValue);
+
+// const arr4 = [4,5,6];
+
+// const initial = 20;
+// const arr5 = arr4.reduce((acc,curr)=> acc+curr, initial );
+
+// console.log(arr5);
+///-----------------------------------------------------
+
+
+
+
+
+
+
+
+
+
 
 ///--------------------filter---------------------------------
 //filter ... syntax ->
@@ -238,10 +246,13 @@ console.log(arr5);
 
 
 
-///-----------------------------------------------------
-// Examples of higher-order functions in JavaScript include forEach, map, filter, reduce, and many others from the standard library.
 
+
+
+///-----------------------------------------------------
+// forEach, map, filter, reduce, are higher order functions.
 //forEach ...syntax ->
+
 //forEach has 3 arguments (currElement, index, array) keep in mind
 // numbers.forEach( function(){} );  -- inshort
 
@@ -249,9 +260,9 @@ console.log(arr5);
 
 // const numbers = [1, 2, 3, 4, 5];
 
-// numbers.forEach(function(num, index, array) {
+// numbers.forEach(function(num, index) {
 //     if (num % 2 === 0) {
-//         array[index] = num * 2; // Double the value of even numbers
+//         numbers[index] = num * 2; // Double the value of even numbers
 //     }
 // });
 
@@ -280,13 +291,67 @@ console.log(arr5);
 
 
 ///-----------------------------------------------------
-*/
 
 
 
 
 
 
+
+
+
+
+
+
+
+///-----------------------------------------------------
+// Higher-order function
+
+// let arr = ['1',402,'true', "banana", "hello", true, 0,  1,2,34,"apple"];
+
+// const filterStr = (arr) => {  // i thought this is callback funbut its not
+//      return arr.filter( item => typeof(item)=== 'string'  ) 
+// }
+
+// const highOrd = (filteredStr) => {  //this is higherord fun no doubt
+//      console.log("Hi below are strings from array 'arr' ");
+//      console.log(filteredStr);
+// }
+
+// const stringF = filterStr(arr);
+
+// highOrd(stringF);
+
+///-----------------------------------------------------
+
+// Higher-order function that accepts a callback
+const performAction = (callback) => {
+    const result = "Action performed!";
+    callback(result);
+}
+
+// Callback function
+const myCallback = (message) => {
+    console.log(message);
+}
+
+// Using the higher-order function
+performAction(myCallback);
+
+///-----------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+/////#### BELOW EXAMPLE ARE COMPLEX, IAM REWRITING THEM ON 3-9-2024, FOR SIMPLICITY, ABOVE/
+////DO NOT REFER THEM, JUST BE CONFIDENT THAT YOU ARE EVOLVING
 
 ///-----------------------------------------------------
 // Higher-order function
@@ -321,10 +386,6 @@ console.log(arr5);
 // performOperation(k, logMessage);
 
 ///-----------------------------------------------------
-
-
-
-
 
 
 
